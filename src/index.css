@@ -1,1 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Datatype:wght@100..900&display=swap');
+
 @import 'tailwindcss';
+
+@theme {
+    --font-datatype: "Datatype", monospace;
+    --font-archivo: "Archivo Black", sans-serif;
+}

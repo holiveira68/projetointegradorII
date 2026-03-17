@@ -8,8 +8,12 @@ import App from './pages/App.jsx'
 import Home from './pages/Home.jsx'
 import Sobre from './pages/Sobre.jsx'
 import Contato from './pages/Contato.jsx'
+import Login from './pages/Login.jsx'
+import Cadastro from './pages/Cadastro.jsx'
+
 
 import MainLayout from './layouts/MainLayout.jsx'
+import AuthLayout from './layouts/AuthLayout.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -22,6 +26,14 @@ createRoot(document.getElementById('root')).render(
           <Route path='/sobre' element={<Sobre />} />
           <Route path='/contato' element={<Contato />} />
         </Route>
+
+        <Route element={<AuthLayout />}>
+           {/* route do Login */}
+           <Route path='login' element={<Login />}/>
+           <Route path='cadastro' element={<Cadastro/>}/>  
+        </Route>
+
+        
       </Routes>
     </BrowserRouter>
   </StrictMode>,
